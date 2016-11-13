@@ -3,7 +3,7 @@ var id     = "id" + Math.floor(Math.random() * 1000);
 // Compatibility shim
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 // PeerJS object
-var peer = new Peer(id, {key: apiKey, host: 'liotta-rtc.herokuapp.com', port: 9000, path: '/peerjs', debug: 3});
+var peer = new Peer(id, {key: apiKey, host: 'https://liotta-rtc.herokuapp.com/', port: 9000, path: '/peerjs', debug: 3});
   console.log("MY id: ", peer.id)
 
 peer.on('open', function(){

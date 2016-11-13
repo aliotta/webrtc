@@ -28,14 +28,4 @@ var options = {
     key: apiKey
 }
 
-app.use('/api', ExpressPeerServer(server, options));
-
-// OR
-
-var server = require('http').createServer(app);
-server.on('connection', function(id) { console.log("connection"); });
-server.on('disconnect', function(id) { console.log("disconnection"); });
-
 app.use('/peerjs', ExpressPeerServer(server, options));
-
-server.listen(9000);

@@ -21,7 +21,7 @@ app.get('/peer.min.js', function(req, res, next) {
   res.sendFile(path.join(__dirname + '/client/assets/scripts/peer.min.js')); 
 });
 
-var server = app.listen(8000);
+var server = app.listen(process.env.PORT || 8000);
 
 var options = {
     debug: true,
